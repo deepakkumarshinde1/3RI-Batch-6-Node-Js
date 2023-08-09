@@ -1,0 +1,90 @@
+Node JS  
+    ==> Node JS Run-Time Environment
+    ==> Js in Browser ==> JS Engine
+    ==> 2009 ==> (V8 + C++) ==> Node JS
+    ==> Node Works as server 
+
+Java 
+    => JRE + (Apache + Tomcat / Nginx)
+
+PHP 
+    => PHP core + (Apache / Nginx) 
+
+Javascript
+    => Node JS 
+
+Node Modulus
+    Native Modules ==> in-build in node js (http , https , path , fs, eventsW)
+    custom modules => Created by Dev [login , sign-up , finance]
+    3rd party modules ==> Create by some one else (React , Express js , MongoDB)
+
+HW 
+    => http 
+    ==> http status
+    ==> methods (GET , POST , PUT  , DELETE)
+        REST API (Representational State Transfer) [Application Programming Interface]
+        Server <=== REST API ===> Client 
+        Server <=== GraphQL ===> Client 
+    ==> what is port number
+        (localhost:3000)
+
+Commands to work with 3rd party modules
+
+HW
+npm ==> Node Package Manager 
+
+#   entry single entry ==> index.js / app.js / server.js
+
+config
+    npm init ==> create package.json
+
+scripts
+    npm start
+    npm run build
+    npm run test
+
+package handling
+    npm i
+    npm update
+    npm un
+
+Express JS 
+    Simple to learn
+    integrant with logic
+    support other library
+    Iit works  MVC Pattern (M: Mode ) (V: View) (Controller)
+    in build routing      
+
+
+created  app.js
+npm init -y
+npm i express
+create a Express server
+
+app.listen ==> to assign PORT Number 
+app.use() ==> express middleware methods
+
+app.set() ==> add configuration support
+    set view folder
+    set view template engine
+
+
+work with routing
+    http methods
+        GET (default) ==> read data
+        POST ==> Add/Insert a data 
+        PUT ==> Update Record On Server 
+        DELETE ==> Delete record on server
+
+# create separate routing
+# create mvc structure
+# add view
+# enable static file sharing
+# render engine called pug/handlebars
+
+Server (NodeJs)  <===> Driver  <===> DB Server
+MongoDb Driver
+    Don't have a Schema structure
+    Need to write more code
+
+Server (NodeJs)  <===> Mongoose <===> Driver  <===> DB Server

@@ -1,0 +1,28 @@
+extends _layout.pug
+
+block js_script
+  script(src="/js/category.js"). 
+  
+block content
+  section.container-fluid 
+      section.row
+        section.col-8.m-auto
+          p.text-center.fw-bold.h3.text-primary Category Details
+          table.table.table-striped.table-bordered
+            thead
+              tr
+                th(width="10%") Sr.No
+                th(width="45%") Name
+                th(width="15%") Action
+        
+                
+            tbody
+              each value,index in list
+                tr
+                  td #{index+1}
+                  td #{value.name}
+                  td
+                    button.remove_cat.btn-sm.btn.btn-danger.me-2(data-index=value._id) 
+                      span.fa.fa-trash
+                    button.edit_cat.btn-sm.btn.btn-primary(data-index=value._id) 
+                      span.fa.fa-edit

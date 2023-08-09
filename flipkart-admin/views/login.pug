@@ -1,0 +1,18 @@
+extends _layout.pug
+
+block js_script
+  script(src="/js/login.js") 
+block content
+  section.row
+    section.col-10.col-lg-4.m-auto.mt-5
+      p.text-center.h3.text-secondary Admin Login
+      section.card.p-3
+        form#login-form
+          .mb-3
+            label.form-label(for="username") User Name
+            input.form-control#username(type="text" placeholder="Enter Username")
+          .mb-3
+            label.form-label(for="password") Password
+            input.form-control#password(type="password" placeholder="Enter Password")
+          div.d-flex.w-100
+            button.btn.btn-primary.w-100(type="submit") Login

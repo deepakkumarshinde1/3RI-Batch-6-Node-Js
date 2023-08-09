@@ -1,0 +1,42 @@
+SQL ==> Database server ==> Database ==> Tables ===> Rows ==> Columns
+No-SQl=> Database Server ==> Database ==> Collection ==> Document ==> Fields
+
+
+# download and install mongodb 
+# download shell of mongodb
+# set the shell path to environment variable
+# has a db object ==> db
+
+you will only able to see db if it has min one collection
+
+data is stored in BSON (Binary JSON)
+db (rack)
+    db list ==> show dbs
+    create ==> use dbName
+    switch ==> use dbName
+    delete ==> db.dropDatabase()
+
+Collection (Book)
+    collection list ==> show collections
+    create collection ==> db.createCollection('collectionName')
+    delete collection ===> db.collectionName.drop()
+
+Document (Page)
+    read
+        db.collectionName.find()
+        db.collectionName.find(filter , projections)
+    insert
+        db.collectionName.insertOne({})
+        db.collectionName.insertMany([{},{},{}])
+
+        ObjectId ==> 64a4d65a dd7c53eee5 96ba5a (Primary Key) (Not NUll, Unique)
+        12 Bytes (24 hex digits)
+
+        4 Bytes ==> Time Stamp Value From Unix epoch (01-01-1970)
+        5 Bytes ==> Process ID which uniques for every machine 
+        3 Bytes ==> Auto Inc Value
+    update
+    delete
+
+0 1 2 3 4 5 6 7 8 9 
+0 1 2 3 4 5 6 7 8 9 a b c d e f

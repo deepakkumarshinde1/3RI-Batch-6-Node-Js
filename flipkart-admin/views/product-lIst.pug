@@ -1,0 +1,23 @@
+extends _layout.pug
+
+block content
+  section.container-fluid 
+      section.row
+        section.col-8.m-auto
+          table.table.table-striped.table-bordered
+            thead
+              tr
+                th(width="10%") Sr.No
+                th(width="45%") Name
+                th(width="15%") Price
+                th(width="30%") Description
+                
+            tbody
+              each value,index in list
+                tr
+                  td #{index+1}
+                  td #{value.title}
+                  td Rs.#{value.price} /-
+                  td #{value.description}
+                  //- td #{value.rating.rate}
+                  //- td #{value.rating.count}

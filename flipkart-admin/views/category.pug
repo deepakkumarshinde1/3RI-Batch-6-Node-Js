@@ -1,0 +1,15 @@
+extends _layout.pug
+
+block js_script
+  script(src="/js/category.js"). 
+block content
+  section.row
+    section.col-10.col-lg-4.m-auto.mt-5
+      p.text-center.h3.text-secondary Add New Category
+      section.card.p-3
+        form#category-form
+          .mb-3
+            label.form-label(for="category") Category Name
+            input.form-control#category(type="text" placeholder="Enter Category Name")
+          div.d-flex.w-100
+            button.btn.btn-primary.w-100(type="submit") Save

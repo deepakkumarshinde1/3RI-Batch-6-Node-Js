@@ -1,0 +1,27 @@
+extends _layout.pug
+
+block content
+  section.row
+    section.col-10.mx-auto
+      .row
+        .col-3
+          .card.my-3
+            .card-body
+              h5.card-title Product
+              h6.card-subtitle.mb-2.text-body-secondary Your all product are here
+              a.btn.btn-primary(href="/get-product-list") View
+              a.btn.btn-success.ms-1(href="/add-product") Add New
+        .col-3
+          .card.my-3
+            .card-body
+              h5.card-title Customer
+              h6.card-subtitle.mb-2.text-body-secondary Your all customer are here
+              a.btn.btn-primary(href="/get-customer-list") View
+        .col-3
+          .card.my-3
+            .card-body
+              h5.card-title Category
+              h6.card-subtitle.mb-2.text-body-secondary Your all category are here
+              a.btn.btn-primary(href="/get-category-list") View
+              a.btn.btn-success.ms-1(href="/add-category") Add New
+              

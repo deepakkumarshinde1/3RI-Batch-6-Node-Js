@@ -1,0 +1,30 @@
+extends _layout.pug
+
+block js_script
+  script(src="/js/product.js"). 
+block content
+  section.row
+    section.col-10.col-lg-4.m-auto.mt-5
+      p.text-center.h3.text-secondary Add Product
+      section.card.p-3
+        form#product-form
+          .mb-3
+            label.form-label(for="category") Product Name
+            input.form-control(name="p_name" type="text" placeholder="Enter Product Name")
+          .mb-3
+            label.form-label(for="") Product Price
+            input.form-control(name="p_price" type="text" placeholder="Enter Product Price")
+          .mb-3
+            label.form-label(for="category") Category
+            select.form-select(name="p_category")
+              option(value="-1") ----Select---- 
+              each data  in categoryList
+                option(value=data._id) #{data.name}
+          .mb-3
+            label.form-label(for="") Description
+            textarea.form-control(name="p_desc" placeholder="Add Product Details")
+          .mb-3
+            label.form-label(for="") Image
+            input.form-control#p_image(name="p_image" type="file")
+          div.d-flex.w-100
+            button.btn.btn-primary.w-100(type="submit") Save

@@ -1,0 +1,62 @@
+[
+  {
+    "first_name": "Janetta",
+    "last_name": "Eliaz",
+    "email": "jeliaz0@slashdot.org",
+    "gender": "Female"
+  },
+  {
+    "first_name": "Norene",
+    "last_name": "Betancourt",
+    "email": "nbetancourt1@guardian.co.uk",
+    "gender": "Female"
+  },
+  {
+    "first_name": "Edmund",
+    "last_name": "Sahnow",
+    "email": "esahnow2@ustream.tv",
+    "gender": "Male"
+  },
+  {
+    "first_name": "Kass",
+    "last_name": "Olczak",
+    "email": "kolczak3@shinystat.com",
+    "gender": "Female"
+  },
+  {
+    "first_name": "Willetta",
+    "last_name": "Trudgian",
+    "email": "wtrudgian4@statcounter.com",
+    "gender": "Female"
+  },
+  {
+    "first_name": "Kori",
+    "last_name": "Pleavin",
+    "email": "kpleavin5@nba.com",
+    "gender": "Female"
+  },
+  {
+    "first_name": "Ailsun",
+    "last_name": "Duns",
+    "email": "aduns6@imdb.com",
+    "gender": "Female"
+  },
+  {
+    "first_name": "Sholom",
+    "last_name": "Sheards",
+    "email": "ssheards7@mlb.com",
+    "gender": "Male"
+  },
+  {
+    "first_name": "Cully",
+    "last_name": "Sunners",
+    "email": "csunners8@tumblr.com",
+    "gender": "Male"
+  },
+  {
+    "first_name": "Dean",
+    "last_name": "Vassar",
+    "email": "dvassar9@people.com.cn",
+    "gender": "Male"
+  }
+]

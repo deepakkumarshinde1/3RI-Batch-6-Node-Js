@@ -1,0 +1,17 @@
+extends _layout.pug
+
+block js_script
+  script.
+    let id = '#{id}';
+  script(src="/js/category.js"). 
+block content
+  section.row
+    section.col-10.col-lg-4.m-auto.mt-5
+      p.text-center.h3.text-secondary Edit Category
+      section.card.p-3
+        form#edit-category-form
+          .mb-3
+            label.form-label(for="category") Category Name
+            input.form-control#editCategory(type="text" placeholder="Enter Category Name" value=name)
+          div.d-flex.w-100
+            button.btn.btn-primary.w-100(type="submit") Update
