@@ -5,7 +5,9 @@ const OuthController = {
     if (request.session.isLogin) {
       response.redirect("/");
     } else {
-      response.render("login");
+      response.render("login", {
+        logout: true,
+      });
     }
   },
   checkLogin: async (request, response) => {
@@ -27,6 +29,10 @@ const OuthController = {
         status: false,
       });
     }
+  },
+  logout: (request, response) => {
+    delete request.session.isLogin;
+    response.redirect("/login");
   },
 };
 

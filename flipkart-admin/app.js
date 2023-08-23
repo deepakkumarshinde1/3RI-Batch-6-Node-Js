@@ -1,9 +1,11 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const session = require("express-session");
+const cors = require("cors");
 const AppRouting = require("./routes/AppRouting");
 
 const app = express();
+app.use(cors()); // enable cors policy
 app.use(
   session({
     secret: "abcd",

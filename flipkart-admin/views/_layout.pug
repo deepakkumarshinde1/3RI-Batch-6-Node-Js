@@ -17,10 +17,18 @@ html
                 span.fa.fa-home.me-2
                 | Home
             li.nav-item
-              a(href="/logout").nav-link.text-danger 
-                span.me-2.fa.fa-power-off
-                | Logout
+              if(logout === undefined)
+                a(href="/logout").nav-link.text-danger 
+                  span.me-2.fa.fa-power-off
+                  | Logout
       block content
     block js_script
+
+    //- nginx
+    //- node js
+    //- upload code 
+
+    //- server ==>  /var/www
+    //- nginx config ==>  /etc/nginx
     
     

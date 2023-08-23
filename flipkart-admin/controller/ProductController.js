@@ -94,7 +94,7 @@ let ProductController = {
       response.status(500).send({ status: false, error });
     }
   },
-  getCategorys: async (request, response) => {
+  getCategories: async (request, response) => {
     let result = await CategoryModel.find();
     response.render("category_list", { list: result });
   },
@@ -120,6 +120,11 @@ let ProductController = {
     } catch (error) {
       response.status(500).send({ status: false, error });
     }
+  },
+
+  apiGetCategories: async (request, response) => {
+    let result = await CategoryModel.find();
+    response.send({ status: true, list: result });
   },
 };
 

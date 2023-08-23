@@ -6,18 +6,37 @@ const validation = require("./validation");
 
 const AppRouting = require("express").Router();
 
-AppRouting.get("/", dummyLogin, ProductController.productHome);
+AppRouting.get("/", checkIsLogin, ProductController.productHome);
 AppRouting.get(
   "/get-product-list",
-  dummyLogin,
+  checkIsLogin,
   ProductController.getProductList
 );
-AppRouting.get("/add-category", ProductController.getCategoryView);
+AppRouting.get(
+  "/add-category",
+  checkIsLogin,
+  ProductController.getCategoryView
+);
 AppRouting.get("/login", OuthController.loginView);
-AppRouting.get("/add-product", ProductController.getAddProduct);
-AppRouting.get("/get-category-list", ProductController.getCategorys);
-AppRouting.get("/edit-category/:id", ProductController.getCategoryEditView);
+AppRouting.get("/add-product", checkIsLogin, ProductController.getAddProduct);
+AppRouting.get(
+  "/get-category-list",
+  checkIsLogin,
+  ProductController.getCategories
+);
+AppRouting.get(
+  "/edit-category/:id",
+  checkIsLogin,
+  ProductController.getCategoryEditView
+);
+
+AppRouting.get("/logout", OuthController.logout);
 // all api
+// react api
+
+AppRouting.get("/api/get-category-list", ProductController.apiGetCategories);
+// react api close
+
 AppRouting.post("/api/check-login", OuthController.checkLogin);
 AppRouting.post(
   "/api/save-new-category",
