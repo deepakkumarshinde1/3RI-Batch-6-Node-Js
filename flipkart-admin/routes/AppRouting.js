@@ -1,5 +1,6 @@
 const OuthController = require("../controller/OuthController");
 const ProductController = require("../controller/ProductController");
+const UserController = require("../controller/UserController");
 const { upload } = require("./FileUploadMiddleware");
 const { checkIsLogin, dummyLogin } = require("./middleware");
 const validation = require("./validation");
@@ -55,5 +56,9 @@ AppRouting.put(
   validation.vUpdateCategory,
   ProductController.updateCategory
 );
+
+AppRouting.post("/api/client/registration", UserController.createAccount);
+
+AppRouting.post("/api/client/login", UserController.login);
 
 module.exports = AppRouting;
